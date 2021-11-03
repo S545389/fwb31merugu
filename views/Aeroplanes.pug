@@ -2,7 +2,8 @@ extends layout
 
 block content
   h1= title
-  - values = [{manufacturedYear: '20', companyName: 'boeing', isBusiness: 'true'}, {manufacturedYear: '19', companyName: 'air india', isBusiness: 'false'},{manufacturedYear: '18', companyName: 'united airlines', isBusiness: 'true'} ]
+  - values = [{manufacturedYear: '20', companyName: 'boeing', isBusiness: 'true'}, {manufacturedYear: '19', companyName: 'air india', isBusiness: 'false'},
+  {manufacturedYear: '18', companyName: 'united airlines', isBusiness: 'true'} ]
   div(class="container-fluid")
       each item,index in values
         div(class="row" onclick=`buy(${index})`)
